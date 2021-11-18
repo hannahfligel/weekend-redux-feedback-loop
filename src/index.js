@@ -9,6 +9,9 @@ import { Provider } from 'react-redux';
 //test reducer 
 const tester = (state='Hello world!', action)=>{
     console.log( 'in tester reducer:', action );
+    if( action.type === 'TEST'){
+        return action.payload.msg;
+    }
     return state;
 }
 
