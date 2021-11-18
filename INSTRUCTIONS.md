@@ -4,18 +4,14 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 
 ### SETUP
 
-Create your database and tables using the provided `data.sql` file. Start the server.
-
-```
-npm install
-npm run server
-```
+[x] Create your database and tables using the provided `data.sql` file. Start the server.
+[x] npm install
+[x] npm run server
 
 Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
 
-```
-npm run client
-```
+[x] npm run client
+
 
 ### ADD NEW FEEDBACK
 
@@ -34,23 +30,23 @@ The parts:
 - Any comments you want to leave?
 ![comments](wireframes/comments.png)
 
-While there is no nav bar, each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
+[] While there is no nav bar, each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
 
 ### Input Validation
 
-Each step should only allow the user to advance to the next step if a score was provided. Be sure to tell the user in some way that a value must be provided.
+[] Each step should only allow the user to advance to the next step if a score was provided. Be sure to tell the user in some way that a value must be provided.
 
 The `Comments` step does not need to be validated, an empty value is okay.
 
 ## THE REVIEW COMPONENT
 
-The last step of the process will allow the user to review their feedback. Users are not able to change their input on this step or go back for Base Mode. 
+[] The last step of the process will allow the user to review their feedback. Users are not able to change their input on this step or go back for Base Mode. 
 
 ![comments](wireframes/review-active.png)
 
 ## SUBMIT THE FEEDBACK
 
-The `Review` step needs to have a submit button which will be clicked on to actually submit the completed feedback to the server.
+[] The `Review` step needs to have a submit button which will be clicked on to actually submit the completed feedback to the server.
 
 When the submit button is clicked, save the submission in the database. The user should see a submission success page. They can then click the button to take a new survey, which needs to reset all the data and go back to the first step.
 
