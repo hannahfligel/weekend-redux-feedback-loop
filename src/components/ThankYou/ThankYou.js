@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+
 
 function ThankYou( props ){
     //const reducerName = useSelector( store => store.reducerName );
@@ -10,7 +13,7 @@ function ThankYou( props ){
     return(
         <div className="thankYouPage">
             <h1>Thank you!</h1>
-            <button>Leave new feedback</button>
+            <button variant="contained"><Link to="/">Leave new feedback</Link></button>
         </div>
     )
 }

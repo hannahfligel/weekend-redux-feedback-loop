@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 function Feeling( props ){
@@ -7,6 +8,7 @@ function Feeling( props ){
     //const [name, setName] =useState ( null );
 
     const dispatch = useDispatch();
+
 
     return(
         <div className="pageContainer">
@@ -19,7 +21,7 @@ function Feeling( props ){
                     </div>
                 </div>
                 <div className="nextButton">
-                    <button>NEXT</button>
+                    <button variant="contained"><Link to="/understanding">NEXT</Link></button>
                 </div>
             </div>
         </div>

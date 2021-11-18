@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 
 function Comments( props ){
     //const reducerName = useSelector( store => store.reducerName );
@@ -18,7 +20,7 @@ function Comments( props ){
                     </div>
                 </div>
                 <div className="nextButton">
-                    <button>NEXT</button>
+                <button variant="contained"><Link to="/thankyou">NEXT</Link></button>
                 </div>
             </div>
         </div>
