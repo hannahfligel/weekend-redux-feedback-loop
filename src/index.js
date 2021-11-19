@@ -6,11 +6,11 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
-//test reducer 
-const tester = (state='Hello world!', action)=>{
-    console.log( 'in tester reducer:', action );
-    if( action.type === 'TEST'){
-        return action.payload.msg;
+//feeling reducer (this is capturing the feeling the user inputs)
+const feeling = (state=0, action)=>{
+    console.log( '=======>In feeling reducer', action );
+    if( action.type === 'ADD_FEELING'){
+        return action.payload;
     }
     return state;
 }
@@ -19,7 +19,7 @@ const tester = (state='Hello world!', action)=>{
 const feedbackStore = createStore(
     //use combineReducers to be able to set up multiple stores 
     combineReducers({
-        tester
+        feeling
     })
 )
 

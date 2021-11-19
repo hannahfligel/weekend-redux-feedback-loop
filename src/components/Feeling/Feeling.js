@@ -9,6 +9,7 @@ function Feeling( props ){
 
     const dispatch = useDispatch();
 
+    const [feeling, setFeeling] = useState(0);
 
     return(
         <div className="pageContainer">
@@ -16,12 +17,24 @@ function Feeling( props ){
                 <div className="inputNextButton">
                     <h1>How are you feeling today?</h1>
                     <div className="inputField">
-                        <label for="input">feeling?</label>
-                        <input id="input" type="number"></input>
+                        <label htmlFor="input">feeling?</label>
+                        <input 
+                            id="input" 
+                            type="number" 
+                            onChange={(event) => setFeeling(event.target.value)}
+                        />
                     </div>
                 </div>
                 <div className="nextButton">
-                    <button variant="contained"><Link to="/understanding">NEXT</Link></button>
+                    <button 
+                        onClick={ ()=>dispatch( {
+                            type:'ADD_FEELING', 
+                            payload: feeling
+                        })} 
+                        variant="contained"
+                    >
+                        <Link to="/understanding">NEXT</Link>
+                    </button>
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@ function Comments( props ){
                 <div className="inputNextButton">
                     <h1>Any comments you want to leave?</h1>
                     <div className="inputField">
-                        <label for="input">feeling?</label>
+                        <label htmlFor="input">feeling?</label>
                         <input id="input"></input>
                     </div>
                 </div>

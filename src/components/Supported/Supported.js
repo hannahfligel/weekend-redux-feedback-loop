@@ -15,7 +15,7 @@ function Supported( props ){
                 <div className="inputNextButton">
                     <h1>How well are you being supported?</h1>
                     <div className="inputField">
-                        <label for="input">Support?</label>
+                        <label htmlFor="input">Support?</label>
                         <input id="input" type="number"></input>
                     </div>
                 </div>

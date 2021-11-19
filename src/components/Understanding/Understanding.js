@@ -15,7 +15,7 @@ function Understanding( props ){
                 <div className="inputNextButton">
                     <h1>How well are you understanding the content?</h1>
                     <div className="inputField">
-                        <label for="input">Understanding?</label>
+                        <label htmlFor="input">Understanding?</label>
                         <input id="input" type="number"></input>
                     </div>
                 </div>
