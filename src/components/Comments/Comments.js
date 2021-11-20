@@ -15,7 +15,6 @@ function Comments( props ){
     const feeling = useSelector (store => store.feeling);
     const understanding = useSelector (store => store.understanding);
     const supported = useSelector (store => store.supported);
-    const comments = useSelector (store => store.comments);
 
     //create a variable that stores an object for all the answers 
     const [newOrder, setNewOrder] = useState({
