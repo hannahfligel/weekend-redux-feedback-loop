@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 
 function Supported( props ){
     //const reducerName = useSelector( store => store.reducerName );
-    //const [name, setName] =useState ( null );
 
     const dispatch = useDispatch();
+    
+    const [supported, setSupported] =useState(0);
+
 
     return(
         <div className="pageContainer">
@@ -20,7 +22,15 @@ function Supported( props ){
                     </div>
                 </div>
                 <div className="nextButton">
-                <button variant="contained"><Link to="/comments">NEXT</Link></button>
+                    <button 
+                        onClick={ ()=>dispatch({
+                            type:'ADD_SUPPORTED',
+                            payload: supported
+                        })}
+                        variant="contained"
+                    >
+                        <Link to="/comments">NEXT</Link>
+                    </button>
                 </div>
             </div>
         </div>

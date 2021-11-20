@@ -9,13 +9,15 @@ function Comments( props ){
 
     const dispatch = useDispatch();
 
+    const [comments, setComments] =useState ( '' );
+
     return(
         <div className="pageContainer">
             <div className="qSection">
                 <div className="inputNextButton">
                     <h1>Any comments you want to leave?</h1>
                     <div className="inputField">
-                        <label htmlFor="input">feeling?</label>
+                        <label htmlFor="input">comments?</label>
                         <input id="input"></input>
                     </div>
                 </div>
