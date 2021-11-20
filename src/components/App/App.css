@@ -1,23 +1,38 @@
-.App {
-  text-align: center;
+
+.pageContainer{
+    padding:  5px 20px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
+
+.inputNextButton{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.App-title {
-  font-size: 2em;
+.inputField{
+    display: flex;
+    flex-direction: column;
 }
 
-.App-intro {
-  font-size: large;
+.nextButton{
+    display: flex;
+    align-items: flex-end;
 }
 
-h4 {
-  font-style: italic;
+.qSection{
+    display: flex;
+    width: 33%;
+}
+
+.thankYouPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
