@@ -11,6 +11,21 @@ function Comments( props ){
 
     const [comments, setComments] =useState ( '' );
 
+    //bring is all items from store 
+    const feeling = useSelector (store => store.feeling);
+    const understanding = useSelector (store => store.understanding);
+    const supported = useSelector (store => store.supported);
+    const comments = useSelector (store => store.comments);
+
+    //create a variable that stores an object for all the answers 
+    const [newOrder, setNewOrder] = useState({
+        feeling: feeling,
+        understanding: understanding, 
+        supported: supported,
+        comments: comments 
+      })
+
+
     return(
         <div className="pageContainer">
             <div className="qSection">
@@ -18,11 +33,22 @@ function Comments( props ){
                     <h1>Any comments you want to leave?</h1>
                     <div className="inputField">
                         <label htmlFor="input">comments?</label>
-                        <input id="input"></input>
+                        <textarea id="input"
+                            id="input"
+                            onChange={(event) => setComments(event.target.value)}
+                        />
                     </div>
                 </div>
                 <div className="nextButton">
-                <button variant="contained"><Link to="/thankyou">NEXT</Link></button>
+                    <button 
+                        onClick={ ()=>dispatch({
+                            type:'ADD_COMMENTS',
+                            payload: comments
+                        })}
+                        variant="contained"
+                    >
+                        <Link to="/thankyou">SUBMIT</Link>
+                    </button>
                 </div>
             </div>
         </div>

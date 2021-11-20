@@ -34,13 +34,22 @@ const supported = (state=0, action)=>{
     return state;
 }
 
+const comments = (state='', action)=>{
+    if( action.type === 'ADD_COMMENTS'){
+        console.log( '------->in supported', action );
+        return action.payload
+    }
+    return state;
+}
+
 //store 
 const feedbackStore = createStore(
     //use combineReducers to be able to set up multiple stores 
     combineReducers({
         feeling,
         understanding,
-        supported
+        supported,
+        comments
     })
 )
 
