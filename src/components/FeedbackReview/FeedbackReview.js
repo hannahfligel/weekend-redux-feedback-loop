@@ -10,7 +10,6 @@ function FeedbackReview( props ){
     //const [name, setName] =useState ( null );
 
     const dispatch = useDispatch();
-    
     const navigate = useNavigate();
 
         //bring is all items from store 
@@ -27,7 +26,7 @@ function FeedbackReview( props ){
             comments: comments 
           })
 
-
+          //create an axios post req to send feedback data to the db 
           const addFeedback = () => {
             console.log('in addItem');
             axios.post('/api/feedback', newFeedback).then((response) => {
@@ -39,7 +38,7 @@ function FeedbackReview( props ){
             })
           }
 
-
+          
 
 
           return(

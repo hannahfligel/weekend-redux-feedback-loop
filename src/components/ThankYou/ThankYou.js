@@ -10,10 +10,30 @@ function ThankYou( props ){
 
     const dispatch = useDispatch();
 
+    const newFeedback = () => {
+        dispatch ({
+            type:'ADD_FEELING',
+            payload: 0,
+        })
+        dispatch ({
+            type:'ADD_UNDERSTANDING',
+            payload: 0,
+        })
+        dispatch ({
+            type:'ADD_SUPPORT',
+            payload: 0,
+        })
+        dispatch ({
+            type:'ADD_COMMENTS',
+            payload: '',
+        })
+    }
+
+
     return(
         <div className="thankYouPage">
             <h1>Thank you!</h1>
-            <button variant="contained"><Link to="/">Leave new feedback</Link></button>
+            <button onClick={newFeedback} variant="contained"><Link to="/">Leave new feedback</Link></button>
         </div>
     )
 }
