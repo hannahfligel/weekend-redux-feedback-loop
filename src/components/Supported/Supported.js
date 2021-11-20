@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
-function Supported( props ){
+function Support( props ){
     //const reducerName = useSelector( store => store.reducerName );
 
     const dispatch = useDispatch();
     
-    const [supported, setSupported] =useState(0);
+    const [support, setSupport] =useState(0);
 
 
     return(
@@ -24,8 +24,8 @@ function Supported( props ){
                 <div className="nextButton">
                     <button 
                         onClick={ ()=>dispatch({
-                            type:'ADD_SUPPORTED',
-                            payload: supported
+                            type:'ADD_SUPPORT',
+                            payload: support
                         })}
                         variant="contained"
                     >
@@ -38,4 +38,4 @@ function Supported( props ){
 }
 
 
-export default Supported;
+export default Support;

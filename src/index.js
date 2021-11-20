@@ -26,9 +26,9 @@ const understanding = (state=0, action)=>{
     return state;
 }
 
-const supported = (state=0, action)=>{
-    if( action.type === 'ADD_SUPPORTED'){
-        console.log( '------->in supported', action );
+const support = (state=0, action)=>{
+    if( action.type === 'ADD_support'){
+        console.log( '------->in support', action );
         return action.payload
     }
     return state;
@@ -36,7 +36,7 @@ const supported = (state=0, action)=>{
 
 const comments = (state='', action)=>{
     if( action.type === 'ADD_COMMENTS'){
-        console.log( '------->in supported', action );
+        console.log( '------->in support', action );
         return action.payload
     }
     return state;
@@ -48,7 +48,7 @@ const feedbackStore = createStore(
     combineReducers({
         feeling,
         understanding,
-        supported,
+        support,
         comments
     })
 )

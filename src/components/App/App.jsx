@@ -7,6 +7,7 @@ import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import ThankYou from '../ThankYou/ThankYou';
+import FeedbackReview from '../FeedbackReview/FeedbackReview';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/supported" element={<Supported />}></Route>
           <Route path="/comments" element={<Comments/>}></Route>
           <Route path="/thankyou" element={<ThankYou/>}></Route>
+          <Route path="/feedbackreview" element={<FeedbackReview/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
