@@ -11,19 +11,6 @@ function Comments( props ){
 
     const [comments, setComments] =useState ( '' );
 
-    //bring is all items from store 
-    const feeling = useSelector (store => store.feeling);
-    const understanding = useSelector (store => store.understanding);
-    const supported = useSelector (store => store.supported);
-
-    //create a variable that stores an object for all the answers 
-    const [newOrder, setNewOrder] = useState({
-        feeling: feeling,
-        understanding: understanding, 
-        supported: supported,
-        comments: comments 
-      })
-
 
     return(
         <div className="pageContainer">
@@ -46,7 +33,7 @@ function Comments( props ){
                         })}
                         variant="contained"
                     >
-                        <Link to="/thankyou">SUBMIT</Link>
+                        <Link to="/feedbackreview">NEXT</Link>
                     </button>
                 </div>
             </div>

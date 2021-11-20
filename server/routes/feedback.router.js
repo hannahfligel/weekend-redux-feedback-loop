@@ -12,4 +12,17 @@ router.get('/', (req, res) => {
     });
 })
 
+// POST Route
+router.post('/', ( req, res ) => {
+    console.log("req.body", req.body);
+    //create a const called queryString and give it the value of the commend being sent to the db 
+    const queryString = `INSERT INTO feedback (feeling, understanding, support, comments) VALUES($1, $2, $3, $4);`;    
+    let values = [req.body.feeling, req.body.understanding, req.body.support, req.body.comments];
+    pool.query( queryString, values ).then( ( results )=>{
+        res.sendStatus( 201 );
+    }).catch( ( error )=>{
+            res.sendStatus( 500) ;
+       })
+}) // END POST Route
+
 module.exports = router;
