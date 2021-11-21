@@ -23,6 +23,8 @@ function Feeling( props ){
                         <input 
                             id="input" 
                             type="number" 
+                            min="1" 
+                            max="5"
                             onChange={(event) => setFeeling(event.target.value)}
                         />
                     </div>

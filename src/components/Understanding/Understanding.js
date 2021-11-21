@@ -22,6 +22,8 @@ function Understanding( props ){
                         <input 
                             id="input" 
                             type="number"
+                            min="1" 
+                            max="5"
                             onChange={(event)=> setUnderstanding (event.target.value)}
                         />
                     </div>

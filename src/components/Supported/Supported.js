@@ -18,7 +18,13 @@ function Support( props ){
                     <h1>How well are you being supported?</h1>
                     <div className="inputField">
                         <label htmlFor="input">Support?</label>
-                        <input id="input" type="number"></input>
+                        <input 
+                            id="input" 
+                            type="number"
+                            min="1" 
+                            max="5"
+                        >
+                        </input>
                     </div>
                 </div>
                 <div className="nextButton">
