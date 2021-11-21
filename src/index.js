@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
+
 //feeling reducer (this is capturing the feeling the user inputs)
 const feeling = (state=0, action)=>{
     //if the action type of 'ADD_FEELING 
