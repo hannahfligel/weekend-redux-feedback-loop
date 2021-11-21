@@ -7,11 +7,16 @@ function Feeling( props ){
     //const reducerName = useSelector( store => store.reducerName );
     //const [name, setName] =useState ( null );
 
+    //add a feeling reducer to bring the feeling from the store 
+    const feelingReducer = useSelector (store => store.feeling);    
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    //create a variable called feeling and set it's initial value to 0 
-    const [feeling, setFeeling] = useState(0);
+    //using a useState hook, bring the saved feeling input from the store to display the initial val as whatever is stored. 
+    //This allows the user to go back to update the input, and if they choose to keep the input the way it was to avoid getting an error 
+    //the initial val of the commentReducer in the store is 0 to ensure that is nothing was inputted at anytime, the user will get an error. 
+    const [feeling, setFeeling] = useState(feelingReducer);
 
     //create a next function that will allow the user to navigate to the next page only if an input was entered, else, create an alert and don't move on to the next page
     const next = () => {
@@ -47,6 +52,8 @@ function Feeling( props ){
                             min="1" 
                             max="5"
                             onChange={(event) => setFeeling(event.target.value)}
+                            //set the default val of the input field to the feelingReducer to allow the user to update their input and to be able to see the previously entered input 
+                            defaultValue={feelingReducer}                            
                         />
                     </div>
                 </div>

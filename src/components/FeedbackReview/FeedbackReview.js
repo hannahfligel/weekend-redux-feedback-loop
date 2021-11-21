@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,7 +24,7 @@ function FeedbackReview( props ){
             feeling: feeling,
             understanding: understanding, 
             support: support,
-            comments: comments 
+            comments: comments
           })
 
           //create an axios post req to send feedback data to the db 
@@ -47,10 +48,22 @@ function FeedbackReview( props ){
                     <div className="inputNextButton">
                         <h1>Review Your Feedback</h1>
                         <div className="inputField">
-                            <p>{newFeedback.feeling}</p>
-                            <p>{newFeedback.understanding}</p>
-                            <p>{newFeedback.support}</p>
-                            <p>{newFeedback.comments}</p>
+                            <p>Feeling:{newFeedback.feeling}</p>
+                            <button>
+                                <Link to="/">UPDATE</Link>
+                            </button>
+                            <p>Understanding: {newFeedback.understanding}</p>
+                            <button>                        
+                                <Link to="/understanding">UPDATE</Link>
+                            </button>
+                            <p>Support: {newFeedback.support}</p>
+                            <button>                        
+                                <Link to="/supported ">UPDATE</Link>
+                            </button>
+                            <p>Comments: {newFeedback.comments}</p>
+                            <button>                        
+                                <Link to="/comments">UPDATE</Link>
+                            </button>
                         </div>
                     </div>
                     <div className="nextButton">
