@@ -1,18 +1,22 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 
 function Understanding( props ){
     //const reducerName = useSelector( store => store.reducerName );
 
+    const understandingReducer = useSelector (store => store.understanding);    
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
 
     //create a variable called understanding and set it's initial value to 0 
-    const [understanding, setUnderstanding] = useState(0);
+    const [understanding, setUnderstanding] = useState(understandingReducer);
 
       //create a next function that will allow the user to navigate to the next page only if an input was entered, else, create an alert and don't move on to the next page
       const next = () => {
@@ -46,6 +50,7 @@ function Understanding( props ){
                             min="1" 
                             max="5"
                             onChange={(event)=> setUnderstanding (event.target.value)}
+                            defaultValue={understandingReducer}
                         />
                     </div>
                 </div>
@@ -53,6 +58,9 @@ function Understanding( props ){
                     <button 
                         //onClick of the next button, send the seeling variable of what the user entered to the store via dispatch 
                         onClick={ next}>NEXT</button>
+                    <button>
+                        <Link to="/">BACK</Link>
+                    </button>
                 </div>
             </div>
         </div>

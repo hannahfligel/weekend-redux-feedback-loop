@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 
 function Support( props ){
     //const reducerName = useSelector( store => store.reducerName );
 
+    const supportReducer = useSelector (store => store.support);    
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     
-    const [support, setSupport] =useState(0);
+    const [support, setSupport] =useState(supportReducer);
 
 
         //create a next function that will allow the user to navigate to the next page only if an input was entered, else, create an alert and don't move on to the next page
@@ -45,12 +50,16 @@ function Support( props ){
                             min="1" 
                             max="5"
                             onChange={(event) => setSupport(event.target.value)}
+                            defaultValue={supportReducer}
                         >
                         </input>
                     </div>
                 </div>
                 <div className="nextButton">
                     <button onClick={next} variant="contained">NEXT</button>
+                    <button>
+                        <Link to="/understanding">BACK</Link>
+                    </button>
                 </div>
             </div>
         </div>
