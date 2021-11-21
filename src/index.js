@@ -28,7 +28,7 @@ const understanding = (state=0, action)=>{
 }
 
 const support = (state=0, action)=>{
-    if( action.type === 'ADD_support'){
+    if( action.type === 'ADD_SUPPORT'){
         console.log( '------->in support', action );
         return action.payload
     }
