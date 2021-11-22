@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Zen+Antique&display=swap');
 
 .pageContainer{
     display: flex;
@@ -21,6 +23,30 @@
     width: 100%;
 }
 
+.reviewCardBody{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commentsContainer{
+    width:500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.commentsContainer p{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boldText{
+    font-weight: bolder;
+}
 
 body{
     background-color: #EBEEF3;
@@ -57,6 +83,8 @@ body{
     align-items: center;
     border-radius: 0px 0px 15px 15px;
 }
+
+
 
 .cardBody{
     display: flex;
@@ -202,6 +230,7 @@ body{
     justify-content: center;
     margin-bottom: 10px;
     border-radius: 15px 15px 0 0 ;
+
 }
 
 
@@ -237,6 +266,29 @@ body{
 
 .backButton:hover{
     text-decoration: underline;
+}
+
+.linkButton{
+    cursor: pointer;
+    border-radius:100px;
+    padding: 13px;
+    width: 90px;
+    background-color: #eff2f5;
+    border: none;
+    color: black;
+    border: 2px solid #3893e9;
+    font-size: 16px;
+    transition: .2s;
+    text-decoration: none; 
+    font-weight: bold;
+    color: #3893e9;
+    text-align: center;
+}
+
+.linkButton:hover{
+    background-color:#3893e9;
+    color: #eff2f5;
+    transition: .2s;
 }
 
 .link{

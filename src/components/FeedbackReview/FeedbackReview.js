@@ -46,23 +46,17 @@ function FeedbackReview(props) {
         <div className="card-header">
           <h1>Review Your Feedback</h1>
         </div>
-        <div className="inputField">
-          <p>Feeling score: {newFeedback.feeling}</p>
-          <button>
-            <Link to="/">UPDATE</Link>
-          </button>
-          <p>Understanding score: {newFeedback.understanding}</p>
-          <button>
-            <Link to="/understanding">UPDATE</Link>
-          </button>
-          <p>Support score: {newFeedback.support}</p>
-          <button>
-            <Link to="/supported ">UPDATE</Link>
-          </button>
-          <p>Comments: {newFeedback.comments}</p>
-          <button>
-            <Link to="/comments">UPDATE</Link>
-          </button>
+        <div className="reviewCardBody">
+          <p><span className="boldText">Feeling score:</span> {newFeedback.feeling}</p>
+            <Link className="linkButton" to="/">UPDATE</Link>
+          <p><span className="boldText">Understanding score:</span> {newFeedback.understanding}</p>
+            <Link className="linkButton" to="/understanding">UPDATE</Link>
+          <p><span className="boldText">Support score:</span> {newFeedback.support}</p>
+            <Link className="linkButton" to="/supported ">UPDATE</Link>
+        <div className="commentsContainer">
+          <p><span className="boldText">Comments:</span> {newFeedback.comments}</p>
+        </div>
+            <Link className="linkButton" to="/comments">UPDATE</Link>
         </div>
         <div className="feelingCardFooter">
           <button className="nextButton" onClick={addFeedback}>SUBMIT</button>
