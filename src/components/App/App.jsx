@@ -9,6 +9,7 @@ import Comments from '../Comments/Comments';
 import ThankYou from '../ThankYou/ThankYou';
 import FeedbackReview from '../FeedbackReview/FeedbackReview';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Admin from '../Admin/Admin';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/comments" element={<Comments/>}></Route>
           <Route path="/thankyou" element={<ThankYou/>}></Route>
           <Route path="/feedbackreview" element={<FeedbackReview/>}></Route>
+          <Route path="/admin" element={<Admin/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
