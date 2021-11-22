@@ -43,29 +43,29 @@ function Comments( props ){
 
     return(
         <div className="pageContainer">
-            <div className="qSection">
-                <div className="inputNextButton">
+            <div className="card">
+                <div className="card-header">
                     <h1>Any comments you want to leave?</h1>
-                    <div className="inputField">
-                        <label htmlFor="input">comments?</label>
-                        <textarea id="input"
-                            id="input"
-                            onChange={(event) => setComments(event.target.value)}
-                            //set the default val of the text area to the comment reducer to allow the user to update their comment and to be able to see the previously entered comment 
-                            defaultValue={commentReducer}
-                        />
+                </div>
+                    <div className="cardBody">
+                            <textarea 
+                                className="textArea"
+                                placeholder="enter comment here..."
+                                onChange={(event) => setComments(event.target.value)}
+                                //set the default val of the text area to the comment reducer to allow the user to update their comment and to be able to see the previously entered comment 
+                                defaultValue={commentReducer}
+                            />
+                    </div>
+                    <div className="cardFooter">
+                        <Link className="backButton link" to="/supported">BACK</Link>
+                        <div>
+                        <button className="nextButton" onClick={next} variant="contained">
+                        NEXT
+                        </button>
                     </div>
                 </div>
-                <div className="nextButton">
-                    <button variant="contained" onClick={next}>
-                        NEXT
-                    </button>
-                    <button>
-                        <Link to="/supported">BACK</Link>
-                    </button>
-                </div>
             </div>
-        </div>
+     </div>
     )
 }
 
