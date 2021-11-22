@@ -42,30 +42,30 @@ function FeedbackReview(props) {
 
   return (
     <div className="pageContainer">
-      <div className="qSection">
-        <div className="inputNextButton">
+      <div className="card">
+        <div className="card-header">
           <h1>Review Your Feedback</h1>
-          <div className="inputField">
-            <p>Feeling:{newFeedback.feeling}</p>
-            <button>
-              <Link to="/">UPDATE</Link>
-            </button>
-            <p>Understanding: {newFeedback.understanding}</p>
-            <button>
-              <Link to="/understanding">UPDATE</Link>
-            </button>
-            <p>Support: {newFeedback.support}</p>
-            <button>
-              <Link to="/supported ">UPDATE</Link>
-            </button>
-            <p>Comments: {newFeedback.comments}</p>
-            <button>
-              <Link to="/comments">UPDATE</Link>
-            </button>
-          </div>
         </div>
-        <div >
-          <button onClick={addFeedback}>SUBMIT</button>
+        <div className="inputField">
+          <p>Feeling score: {newFeedback.feeling}</p>
+          <button>
+            <Link to="/">UPDATE</Link>
+          </button>
+          <p>Understanding score: {newFeedback.understanding}</p>
+          <button>
+            <Link to="/understanding">UPDATE</Link>
+          </button>
+          <p>Support score: {newFeedback.support}</p>
+          <button>
+            <Link to="/supported ">UPDATE</Link>
+          </button>
+          <p>Comments: {newFeedback.comments}</p>
+          <button>
+            <Link to="/comments">UPDATE</Link>
+          </button>
+        </div>
+        <div className="feelingCardFooter">
+          <button className="nextButton" onClick={addFeedback}>SUBMIT</button>
         </div>
       </div>
     </div>
