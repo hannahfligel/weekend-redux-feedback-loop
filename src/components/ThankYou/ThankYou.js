@@ -33,7 +33,7 @@ function ThankYou( props ){
     return(
         <div className="thankYouPage">
             <h1>Thank you!</h1>
-            <button onClick={newFeedback} variant="contained"><Link to="/">Leave new feedback</Link></button>
+            <Link className="newFeedbackButton" onClick={newFeedback} to="/">LEAVE NEW FEEDBACK</Link>
         </div>
     )
 }
