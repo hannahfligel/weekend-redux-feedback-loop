@@ -46,24 +46,24 @@ function Support(props) {
           <div className="iconContainer">
             {/* onClick run an anonymous function to set the rating to the number associated with the icon the user clicked on*/}
             <div onClick={() => setSupport(1)} className="iconButton">
-              {/* tabindex allow you to have a focus state the keep the clicked on item focused - need to add :focused in css */}
-              <div tabindex="0" className="terribleIconImg" />
+              {/* tabIndex allow you to have a focus state the keep the clicked on item focused - need to add :focused in css */}
+              <div tabIndex="0" className="terribleIconImg" />
               <p>Terrible</p>
             </div>
             <div onClick={() => setSupport(2)} className="iconButton">
-              <div tabindex="0" className="badIconImg"></div>
+              <div tabIndex="0" className="badIconImg"></div>
               <p>Bad</p>
             </div>
             <div onClick={() => setSupport(3)} className="iconButton">
-              <div tabindex="0" className="okayIconImg" />
+              <div tabIndex="0" className="okayIconImg" />
               <p>Okay</p>
             </div>
             <div onClick={() => setSupport(4)} className="iconButton">
-              <div tabindex="0" className="goodIconImg" />
+              <div tabIndex="0" className="goodIconImg" />
               <p>Good</p>
             </div>
             <div onClick={() => setSupport(5)} className="iconButton">
-              <div tabindex="0" className="greatIconImg" />
+              <div tabIndex="0" className="greatIconImg" />
               <p>Great</p>
             </div>
           </div>

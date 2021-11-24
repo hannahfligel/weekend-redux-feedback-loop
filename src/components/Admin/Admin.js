@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { Table } from "react-bootstrap";
 import AdminFeedbackItem from "./AdminFeedbackItem";
+import "../Admin/Admin.css";
 
 function Admin(props) {
   //const reducerName = useSelector( store => store.reducerName );
@@ -31,7 +32,7 @@ function Admin(props) {
   return (
     <div className="adminDiv container">
       <h1>Admin</h1>
-      <Table striped bordered hover>
+      <table striped bordered hover>
         <thead>
           <tr>
             <th>Feeling</th>
@@ -46,7 +47,7 @@ function Admin(props) {
             <AdminFeedbackItem feedback={feedback} key={feedback.id} />
           ))}
         </tbody>
-      </Table>
+      </table>
     </div>
   );
 }
